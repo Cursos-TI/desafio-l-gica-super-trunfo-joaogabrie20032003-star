@@ -1,74 +1,98 @@
-# ⚠️ Importante!!!
-Você pode escolher qualquer um dos desafios para desenvolver. Sinta-se à vontade para começar pelo desafio que mais lhe interessa.
+# 🏙️ Super Trunfo de Cidades em C
 
-# Desafio Super Trunfo - Países - Comparação das Cartas
+Este projeto é uma versão simplificada do jogo **Super Trunfo**, focado em comparar atributos de cidades. Ele foi desenvolvido em linguagem C, com entrada de dados via terminal, e pode ser executado com qualquer compilador compatível com GCC.
 
-Bem-vindo ao desafio "Super Trunfo - Países"! Neste projeto, você desenvolverá um sistema para comparar cartas baseadas em atributos de cidades. O desafio é dividido em três níveis: Novato, Aventureiro e Mestre. Cada nível adiciona novas funcionalidades e complexidades, permitindo um aprendizado progressivo.
+## 📁 Estrutura do Código
 
-## 🏅 Nível Novato
+- **Arquivo principal**: `logicaSuperTrunfo.c`
+- **Linguagem**: C
+- **Compilador recomendado**: GCC (via MinGW para Windows)
 
-No nível Novato, você começará implementando a lógica básica de comparação entre cartas utilizando estruturas de decisão `if` e `if-else`.
+## ⚙️ Funcionalidades
 
-### 🚩 Objetivos:
-- **Cadastro de Cartas:** O sistema permitirá ao usuário cadastrar cartas de cidades, incluindo informações como estado, código da carta, nome da cidade, população, área, PIB e número de pontos turísticos.
-- **Comparação de Cartas:** O sistema comparará os atributos de duas cartas e determinará a vencedora com base em uma propriedade específica (população, área, PIB, etc.), escolhida no código.
-- **Exibição de Resultados:** Após a comparação, o sistema exibirá qual carta venceu com base na regra: maior valor vence, exceto em densidade populacional, onde o menor valor é o vencedor.
+- Cadastro de até **duas cidades** com os seguintes atributos:
+  - Nome da cidade
+  - Estado
+  - Código
+  - População
+  - Área (km²)
+  - PIB (em bilhões)
+  - Pontos turísticos
 
-### 📥 Entrada de Dados:
-- Os dados das cartas serão inseridos manualmente via terminal.
-- O sistema solicitará interativamente as informações de cada carta.
+- Dois modos de comparação:
+  - **Simples**: compara um único atributo
+  - **Mestre**: compara dois atributos com critérios de desempate
 
-### 📤 Saída de Dados:
-- Após o cadastro, as propriedades da cidade serão exibidas de forma organizada.
-- O resultado da comparação será mostrado, indicando a carta vencedora.
+## 🧱 Dependências
 
----
+- GCC (MinGW) instalado e configurado no `PATH`
+- Visual Studio Code com as seguintes extensões:
+  - [C/C++ da Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)
+  - [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner) (opcional)
 
-## 🏅 Nível Aventureiro
+## 🚀 Como compilar e executar no VS Code (sem debug)
 
-No nível Aventureiro, você expandirá o sistema para incluir a comparação aninhada e a criação de um menu interativo usando `switch`.
+### 1. Abrir o terminal no VS Code
 
-### 🆕 Diferença em relação ao Nível Novato:
-- **Menu Interativo:** O usuário poderá escolher diferentes atributos para comparação através de um menu.
-- **Comparação Aninhada:** Implementação de lógica de comparação mais complexa, utilizando estruturas aninhadas para tomar decisões baseadas em múltiplos atributos.
+Use o atalho:
 
-### 🚩 Novas Funcionalidades:
-- **Cadastro de Cartas:** Similar ao nível Novato, com a adição de comparação de múltiplos atributos.
-- **Menu Interativo:** Uso de `switch` para criar um menu que permite ao jogador escolher os atributos a serem comparados.
-- **Exibição de Resultados:** O sistema exibirá o resultado da comparação, indicando qual carta venceu e qual atributo foi utilizado.
+Ctrl + `
 
----
+Ou vá em: `Terminal → New Terminal`
 
-## 🏅 Nível Mestre
+### 2. Compilar o código
 
-No nível Mestre, o desafio se intensifica com a adição de funcionalidades avançadas, como menus dinâmicos e lógica de decisão complexa com operadores ternários.
+No terminal, digite:
 
-### 🆕 Diferença em relação ao Nível Aventureiro:
-- **Escolha de Dois Atributos:** O usuário poderá escolher dois atributos para comparação entre as cartas.
-- **Lógica de Decisão Complexa:** Implementação de estruturas de decisão aninhadas e encadeadas, além do uso de operadores ternários para determinar a carta vencedora.
-- **Menus Dinâmicos:** Os menus serão dinâmicos, permitindo uma navegação fluida entre as opções de comparação.
+gcc logicaSuperTrunfo.c -o logicaSuperTrunfo.exe
 
-### 🚩 Novas Funcionalidades:
-- **Comparação de Dois Atributos:** O sistema comparará dois atributos simultaneamente para determinar a carta vencedora.
-- **Lógica Avançada:** Uso de operadores ternários e lógica aninhada para lidar com comparações complexas.
-- **Empates:** O sistema será capaz de lidar com empates, exibindo mensagens apropriadas.
-- **Exibição de Resultados:** Exibição dos resultados das comparações de forma clara e interativa.
 
----
+Esse comando irá gerar um executável chamado `logicaSuperTrunfo.exe`.
 
-## 📋 Requisitos Funcionais Comuns
-- **Cadastro de Cartas:** O sistema deve permitir o cadastro de cartas com as informações necessárias.
-- **Comparação:** O sistema deve comparar as cartas e determinar a vencedora com base nas regras estabelecidas.
-- **Exibição de Resultados:** Os resultados devem ser exibidos de forma clara, indicando a carta vencedora.
+### 3. Executar o programa
 
-## 📌 Requisitos Não Funcionais Comuns
-- **Usabilidade:** A interface do usuário deve ser simples e intuitiva.
-- **Performance:** O sistema deve executar operações sem atrasos perceptíveis.
-- **Manutenibilidade:** O código deve ser bem estruturado e documentado.
-- **Confiabilidade:** O sistema deve ser robusto e capaz de lidar com entradas inválidas de forma adequada.
+./logicaSuperTrunfo.exe
 
----
 
-Boa sorte no desenvolvimento deste desafio e aproveite para aprender e se divertir enquanto progride pelos níveis!
+Você será guiado para cadastrar duas cidades e, em seguida, poderá escolher os atributos para compará-las.
 
-Equipe de Ensino - MateCheck
+## 💡 Observações
+
+- O programa usa `scanf()` e `fgets()` para entrada de dados — portanto, **deve ser executado via terminal**, e não por depuradores automáticos.
+- A opção de comparação ativa no código é o **modo mestre**, que compara dois atributos. Para mudar para o modo simples, edite a função `main()` e comente/descomente as linhas:
+
+```c
+//compararSimples(cartas[0], cartas[1]);
+compararDoisAtributos(cartas[0], cartas[1]);
+
+📸 Exemplo de uso
+
+Cadastro da primeira carta:
+Digite o código da carta: 1
+Digite o nome da cidade: São Paulo
+Digite o estado: SP
+Digite a população: 12000000
+Digite a área (km²): 1521
+Digite o PIB (em bilhões): 700
+Digite o número de pontos turísticos: 15
+
+Cadastro da segunda carta:
+...
+
+Escolha o primeiro atributo:
+1 - População
+2 - Área
+3 - PIB
+4 - Pontos Turísticos
+5 - Densidade Populacional
+> 1
+
+Escolha o segundo atributo:
+> 3
+
+Vencedora: São Paulo
+
+🧠 Autor
+
+Projeto criado por João gabriel, com apoio de orientação para compilação, execução e estruturação no VS Code.
+
